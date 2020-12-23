@@ -1,0 +1,51 @@
+<html lang="en">
+ <head>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap" rel="stylesheet">
+    <style type='text/css'>
+        body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+        a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+       html {
+        background-color: #000000;
+        background-image: url('https://images.pexels.com/photos/1045534/pexels-photo-1045534.jpeg?cs=srgb&dl=pexels-c%C3%A1tia-matos-1045534.jpg&fm=jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+               font-family: 'Taviraj', serif;
+               font-size: 25px;
+               color: #4c00ff;
+       }    
+       </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>multi</title>
+
+   <script >
+    function multi(num){
+    num = document.getElementById('number').value
+    div   = document.getElementById('disp');
+    div.innerHTML = "";
+    table = ``
+    for(i = 1; i<=12; i++){  
+        table += `<tr>
+                        <td>${num} x ${i} = </td>
+                        <td>${num*i} </td>
+            </tr>`
+        }
+
+    div.innerHTML = table
+   }
+  
+ </script>
+ </head>
+ <body align = "center" >
+    <br><br>
+    <br><br>
+    <input type="Integer" id="number" >
+    <button onclick="multi();">คำนวณ</button>
+    <table border="2" align = "center">
+        <br><br>
+        <tbody id="disp"></tbody>
+    </table>
+
+ </body>
+</html>

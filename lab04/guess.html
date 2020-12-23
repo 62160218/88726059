@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        b{
+            color:whitesmoke;
+            font-size: 30px;
+
+        }
+        button{
+			color:#fff;
+			background-color:#6962EC;
+			border-color:#6962EC;
+			border-width: 0.5px;
+		}
+        button:hover{
+		    color:black;
+		    background:sandybrown;
+			border-color:brown;
+			border-width: 0.5px;
+		}
+        input{
+            background-color:#9c98e7;
+        }
+
+    </style>
+    <script>
+        rn = Math.floor(Math.random()*100); //ค่าที่ถูกสุ่มมา
+        function guess(){
+            num = document.getElementById('number')
+            hist = document.getElementById('hist')
+            result = document.getElementById('result')
+            hist.innerHTML += num.value +" "
+    
+            if(num.value == rn){
+                result.innerHTML = "ถูกต้อง"
+            }
+            if(num.value < rn){
+                result.innerHTML = "น้อยไป"
+            }
+            if(num.value > rn){
+                result.innerHTML = "มากไป"
+            }
+            num = document.getElementById('number').value=""
+    
+        }
+        function startOver(){
+            num = document.getElementById('number').value=""
+            hist = document.getElementById('hist').innerHTML=""
+            result = document.getElementById('result').innerHTML=""
+            rn = Math.floor(Math.random()*100);
+        }
+    </script>
+    
+</head>
+<body align="center" background ="pexels-photo-3618162.jpeg">
+        <b>Random Game</b></br>
+        <input type="Integer" placeholder="?" id="number" >
+        <button onclick="guess()">Guess</button>
+        <div id="hist" style="color: whitesmoke;"></div>
+        <div id="result" style="color: whitesmoke;"></div></br>
+        <button onclick="startOver()">Start Over</button>
+</body>
+</html>

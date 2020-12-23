@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap" rel="stylesheet">
+    <style type='text/css'>
+        body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+        a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+       html {
+        background-color: #000000;
+        background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+               font-family: 'Taviraj', serif;
+               font-size: 25px;
+               color: #60e1c7;
+       }
+       </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+    <script>
+        function random() {
+            let x = document.querySelector('#x')
+            let result = document.querySelector('#result')
+
+            result.innerHTML = ''
+
+            let numbers = []
+            for (let i = 0; i < parseInt(x.value); i++) {
+                rn = Math.floor(Math.random() * 100)
+                numbers.push(rn)
+            }
+
+            numbers.sort((a, b) => a - b)
+
+            console.log(numbers)
+
+            let count = 1
+            let table = ``
+
+            for (let i = 1; i <= numbers.length; i++) {
+                if (numbers[i] == numbers[i - 1]) {
+                    count++
+                }
+                else {
+                    table += `<tr>
+                                <td>${numbers[i - 1]}</td>
+                                <td>${count}</td>
+                            </tr>`
+                    count = 1
+                }
+            }
+
+            result.innerHTML = table
+        }
+    </script>
+</head>
+<br><br>
+<br><br>
+<body align = "center">
+    <input type="text" placeholder="ใส่ตัวเลขที่ต้องการ" id="x">
+    <button onclick="random()">สุ่ม</button>
+    <br><br>
+    <table border="1" align = "center">
+        <thead>
+            <tr>
+                <th>ตัวเลข</th>
+                <th>ถูกสุ่ม</th>
+            </tr>
+        </thead>
+
+        <tbody id="result">
+
+        </tbody>
+    </table>
+</body>
+
+</html>

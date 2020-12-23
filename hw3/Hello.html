@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script>
+        function namein(n){
+            div = document.getElementById('nn');
+            div.innerHTML = "";
+            div.innerHTML += "Hello "+n+" ";
+        }
+     </script>
+     <style type='text/css'>
+         body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+         a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+         html {
+            background-color: #000000;
+            background-image: url('https://images.pexels.com/photos/3643925/pexels-photo-3643925.jpeg?cs=srgb&dl=pexels-tim-mossholder-3643925.jpg&fm=jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+                font-size: 25px;
+                font-family: 'Taviraj', serif;
+                color: #4c00ff;
+         }
+     </style>
+</head>  
+<body align = "center">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap" rel="stylesheet">
+    <br><br>
+    <br><br>
+    <b>โปรแกรม ทักทาย - hello.html</b><br><br>
+    <input type="text" onkeyup = "namein(this.value);">
+    <br><br>
+    <div id="nn"></div>
+</body>
+</html>

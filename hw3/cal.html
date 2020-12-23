@@ -1,0 +1,57 @@
+<link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap" rel="stylesheet">
+<style type='text/css'>
+    body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+    a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+   html {
+        background-color: #000000;
+        background-image: url('https://images.pexels.com/photos/1203777/pexels-photo-1203777.jpeg?cs=srgb&dl=pexels-henry-%26-co-1203777.jpg&fm=jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+               font-family: 'Taviraj', serif;
+               font-size: 25px;
+               color: #ff00f7;
+   }
+   </style>
+<body>
+
+<br><br>
+<br><br>
+<p>โปรแกรม เครื่องคิดเลข - cal.html</p>
+
+<script>
+    function sumall(){
+        n1 = document.getElementById('n1');
+        n2 = document.getElementById('n2');
+        var sum = document.getElementById('sum');
+        s1 =document.getElementById('s1');
+        if(parseInt(s1.value) == 1){
+            sum.innerHTML=parseInt(n1.value) + parseInt(n2.value)
+        }
+        if(parseInt(s1.value) == 2){
+            sum.innerHTML=parseInt(n1.value) - parseInt(n2.value)
+        }
+        if(parseInt(s1.value) == 3){
+            sum.innerHTML=parseInt(n1.value) * parseInt(n2.value)
+        }
+        if(parseInt(s1.value) == 4){
+            sum.innerHTML=parseInt(n1.value) / parseInt(n2.value)
+        }
+       
+   
+    } 
+</script>
+</head>
+<body align = "center">
+        <input type="text" placeholder="ใส่ตัวเลขที่ต้องการ" id="n1">
+        <td><select name="mark" id="s1">
+        <option value="1" >+</option>
+        <option value="2" >-</option>
+        <option value="3" >*</option>
+        <option value="4" >/</option>
+        </select>
+        <input type="text" placeholder="ใส่ตัวเลขที่ต้องการ" id="n2">
+        <button onclick="sumall()"> = </button>
+        <div id="sum"></div>
+    </body>
+</html>

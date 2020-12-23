@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@400;700&display=swap" rel="stylesheet">
+    <style type='text/css'>
+        body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+        a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+       html {
+        background-color: #000000;
+        background-image: url('https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg?cs=srgb&dl=pexels-pixabay-315938.jpg&fm=jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+               font-family: 'Taviraj', serif;
+               font-size: 25px;
+               color: #ff0ae2;
+       }
+       </style>
+<body>
+
+<br><br>
+<br><br>
+<p>โปรแกรม บวกสะสม - sum.html</p>
+    
+<script>
+    function summary(){
+          sum = document.getElementById('sum').innerHTML=""
+          number1 = document.getElementById('x');
+          number2 = document.getElementById('y');
+          sum = document.getElementById('sum');
+          var c = 0;
+          
+    for ( let i = parseInt(number1.value);i<=parseInt(number2.value);i++) {
+        c = c+i;
+
+        sum.innerHTML +=i
+        if(i<parseInt(number2.value)){
+            
+            sum.innerHTML += "+"
+        }
+        if(i==parseInt(number2.value)){
+            sum.innerHTML += "="
+            sum.innerHTML += c
+        }
+    }
+}
+</script>
+<body align = "center">
+            <input type="text" placeholder="ใส่ตัวเลข" id="x"> -  
+            <input type="text" placeholder="ใส่ตัวเลข" id="y">
+            <button onclick="summary()">คำนวณ</button>
+            <div id="sum"></div>
+            
+</body>
+</html>
