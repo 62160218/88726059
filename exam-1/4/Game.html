@@ -1,0 +1,303 @@
+<html>
+    <head>
+    <title>Ten Questions</title>
+    <script type="text/javascript">
+        var score = 0;
+        var questions = 10;
+    
+        function start() {
+            if (questions == 10) {
+                document.getElementById("question").innerHTML = "บางแสนอยู่ตำบลอะไร";
+                document.getElementById("option1").innerHTML = "บางละมุง";
+                document.getElementById("option2").innerHTML = "แสนสุข";
+                document.getElementById("option3").innerHTML = "บ้านสวน";
+            }
+    
+            else if (questions == 9) {
+                document.getElementById("question").innerHTML = "มหาวิทยาลัยบูรพามีกี่วงเวียน";
+                document.getElementById("option1").innerHTML = "6วงเวียน";
+                document.getElementById("option2").innerHTML = "7วงเวียน";
+                document.getElementById("option3").innerHTML = "8วงเวียน";
+            }
+    
+            else if (questions == 8) {
+                document.getElementById("question").innerHTML = "ตึกคณะวิทยาการสารสนเทศมีกี่ชั้น";
+                document.getElementById("option1").innerHTML = "8ชั้น";
+                document.getElementById("option2").innerHTML = "1ชั้น";
+                document.getElementById("option3").innerHTML = "11ชั้น";
+            }
+    
+            else if (questions == 7) {
+                document.getElementById("question").innerHTML = "สีประจำมหาวิทยาลัยบูรพาคือสีอะไร";
+                document.getElementById("option1").innerHTML = "เทา-ทอง";
+                document.getElementById("option2").innerHTML = "แดง-ฟ้า";
+                document.getElementById("option3").innerHTML = "ฟ้า-เขียว";
+            }
+    
+            else if (questions == 6) {
+                document.getElementById("question").innerHTML = "มหาวิทยาลัยบูรพามีพิพิธภัณฑ์อะไร";
+                document.getElementById("option1").innerHTML = "พิพิธภัณฑ์สัตว์บก";
+                document.getElementById("option2").innerHTML = "พิพิธภัณฑ์สัตว์น้ำ";
+                document.getElementById("option3").innerHTML = "พิพิธภัณฑ์สัตว์อากาศ";
+            }
+    
+            else if (questions == 5) {
+                document.getElementById("question").innerHTML = "ใครคือผู้สร้างเฟสบุ๊ค";
+                document.getElementById("option1").innerHTML = "Bill Gates";
+                document.getElementById("option2").innerHTML = "Mark Zuckerburg";
+                document.getElementById("option3").innerHTML = "Micheal Jackson";
+            }
+    
+            else if (questions == 4) {
+                document.getElementById("question").innerHTML = "ใครคือประธานาธิบดีสหรัฐคนปัจจุบัน";
+                document.getElementById("option1").innerHTML = "Donald Trump";
+                document.getElementById("option2").innerHTML = "Barack Obama";
+                document.getElementById("option3").innerHTML = "Joe Biden";
+            }
+    
+            else if (questions == 3) {
+                document.getElementById("question").innerHTML = "ประเทศไทยมีกี่จังหวัด";
+                document.getElementById("option1").innerHTML = "73จังหวัด";
+                document.getElementById("option2").innerHTML = "76จังหวัด";
+                document.getElementById("option3").innerHTML = "77จังหวัด";
+            }
+    
+            else if (questions == 2) {
+                document.getElementById("question").innerHTML = "พอลล่ากระโดดลงไปในน้ำแล้วทำไมผมไม่เปียก?";
+                document.getElementById("option1").innerHTML = "เพราะพอลล่าใส่ชุดดำน้ำ";
+                document.getElementById("option2").innerHTML = "เพราะผมยืนดูพอลล่าอยู่ข้างบน ไม่ได้โดดลงไปด้วย";
+                document.getElementById("option3").innerHTML = "เพราะพอลล่าใส่เสื้อกันฝน";
+            }
+    
+            else if (questions == 1) {
+                document.getElementById("question").innerHTML = "ใครคือ CEO ของบริษัทMicrosof office?";
+                document.getElementById("option1").innerHTML = "Bill Gates";
+                document.getElementById("option2").innerHTML = "Mark Zuckerburg";
+                document.getElementById("option3").innerHTML = "Darth Vader";
+            }
+    
+            else if (questions == 0) {
+                document.getElementById("question").innerHTML = "";
+                document.getElementById("option1").innerHTML = "";
+                document.getElementById("option2").innerHTML = "";
+                document.getElementById("option3").innerHTML = "";
+                document.getElementById("score").innerHTML = "Your score was: " + score;
+            }
+    
+        }
+    
+        function answer(question) {
+            if (questions == 10) {
+                if (question == 1) {
+                    score++; 
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 9) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score++;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 8) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 7) {
+                if (question == 1) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 6) {
+                if (question == 1) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 5) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 4) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 3) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score++;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 2) {
+                if (question == 1) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score++;
+                    questions--;
+                    start();
+                }
+            }
+    
+            else if (questions == 1) {
+                if (question == 1) {
+                    score++;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 2) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+    
+                else if (question == 3) {
+                    score = score;
+                    questions--;
+                    start();
+                }
+            }
+        }
+    </script>
+    </head>
+     <body onload="javascript:start()">
+     <div>
+    <span id="question">
+    The question will be changed dynamically so the text here doesn't matter
+        </span><br />
+        <button onclick="javascript:answer(1)" id="option1">Random Answer 1</button><br />
+        <button onclick="javascript:answer(2)" id="option2">Random Answer 2</button><br />
+        <button onclick="javascript:answer(3)" id="option3">Random Answer 3</button><br />
+    <font face="Tahoma" color="red"><span id="score"></span></font>
+    </div>
+    </body>
+    </html>
